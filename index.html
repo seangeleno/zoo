@@ -13,8 +13,10 @@
 
       {{ zooCtrl.name }}
 
-
-
+        <ul>
+          <!--  loop thorugh zooCtrl-->
+          <li ng-repeat="animal in zooCtrl.animals" ng-show="animal.visible">{{ animal.name }} the {{ animal.type}}<button ng-click="zooCtrl.changeVisibility(animal)" type="button" name="button">Show/Hide</button></li>
+        </ul>
 
     </div>
   </body>
